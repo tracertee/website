@@ -81,7 +81,7 @@
 	{% if post.type == 'reverse' %}
 
     <tr>
-      <td style="text-align: left"> <a href=/website"{{ post.url }}"> {{post.date | date_to_string }}</a></td>
+      <td style="text-align: left"> <a href="/website{{ post.url }}"> {{post.date | date_to_string }}</a></td>
       <td style="text-align: left"> {{post.competitionTitle}}</td>
       <td style="text-align: left"> <a href="/website{{ post.url }}">{{post.title}}</a></td>
       <td style="text-align: center"> {{post.excerpt}}</td>
