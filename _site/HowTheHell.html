@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>How did this go down? | Tracertee Hacker and Pinball Repo</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="How did this go down?" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="website" />
+<meta property="og:description" content="website" />
+<link rel="canonical" href="http://localhost:4000/HowTheHell.html" />
+<meta property="og:url" content="http://localhost:4000/HowTheHell.html" />
+<meta property="og:site_name" content="Tracertee Hacker and Pinball Repo" />
+<script type="application/ld+json">
+{"@type":"WebPage","headline":"How did this go down?","url":"http://localhost:4000/HowTheHell.html","description":"website","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c784af91e2719c9ae2363f29390d53159fc5bd7f">
+    <script src="https://code.jquery.com/jquery-3.3.0.min.js" integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=" crossorigin="anonymous"></script>
+    <script src="/assets/js/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Tracertee Hacker and Pinball Repo</h1>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://tracertee.github.io/frontend/" class="button"><strong>Home</strong></a>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1 id="how-did-this-go-down">How did this go down?</h1>
+
+<p>This readme is for me as much as it is you.  I spent the better part of a day trying to figure jekyll and git pages out. So here is my first writeup!</p>
+
+<h2 id="installation">Installation</h2>
+
+<ol>
+  <li>
+    <p>Go get a github account then follow the instructions on how to build Pages <a href="https://pages.github.com">here</a>.  I chose the <i> Leap Day </i> theme</p>
+  </li>
+  <li>
+    <p>Follow the tutorial to figure out how the hell <i> Jekyll </i> works <a href="https://jekyllrb.com/docs/step-by-step/01-setup/">here</a></p>
+  </li>
+  <li>
+    <p>The reference material for the <i> Leap Day </i> theme is <a href="https://jekyllrb.com/docs/step-by-step/01-setup/">here</a></p>
+  </li>
+  <li>Once you get it working on your local machine, I copied: <br /><code class="highlighter-rouge">&lt;jekyll root&gt;/_layouts/default.html</code> <br /> and created my own layouts based on the templates that I woudld be doing.  So for the CTF stuff, I had the following:
+    <ul>
+      <li>challengeList.html</li>
+      <li>ctfList.html</li>
+      <li>writeup.html</li>
+      <li>default.html  <br /><br /></li>
+    </ul>
+  </li>
+  <li>
+    <p>This way I would have a template to list the challanges (challegeList.html), a template for listing the ctf’s (ctfList.html), a template for writeups (writeup.html), and the default. 
+Each template has a bit of code in it as you can see on github to iterate through lists and populate tables.  The default is a nice blank page with just the title.  This took a bit of time fucking around with the ruby based for loops.</p>
+  </li>
+  <li>The way I ended up organizing this (keep in mind I am a hacker not a professional programmer) was to use the “categories” variable in the ‘front matter’ to differentiate between a ctf competition and a ctf challenge.  All CTF competition will get the “list” name and all challenges for that ctf will get the “<name of="" the="" ctf="">" as their categories name.  From there I iterate on the respective layout to populate the tables with 'posts'.  Everything is a post (meaning ctf comptitions and challenges are both posts).  I organized everything in the directory structure: <br /></name></li>
+</ol>
+
+<p><code class="highlighter-rouge">&lt;jekyll root&gt;/_posts/competitions/&lt;ctf name&gt;/&lt;post in jekyll format&gt;</code></p>
+
+<ol>
+  <li>I created a ‘post’ template for the writeups and for the competitions so I wouldn’t forget this complicated shitshow.  The end for now…</li>
+</ol>
+
+
+
+      </section>
+      <footer>
+        
+          <p>Project maintained by <a href="https://github.com/tracertee">tracertee</a></p>
+        
+        <p>Full Size credit to the Theme by <a href="https://twitter.com/mattgraham">mattgraham, Thanks Alot!</a></p>
+      </footer>
+    </div>
+
+  </body>
+</html>
