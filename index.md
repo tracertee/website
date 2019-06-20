@@ -13,6 +13,6 @@ Without further ado:
 
 # [Blog](./blog.html)
 
-# [Pinball Blog](./pinball.html)
+# [Pinball Blog](/website/pinball.html)
 
 # [How The Hell did I do this?](./HowTheHell.html) 
