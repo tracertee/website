@@ -14,7 +14,7 @@
 {"@type":"WebPage","headline":"How did this go down?","url":"/HowTheHell.html","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=392a7dc3a7f86176ef950c0b115200e41f2f1f99">
+    <link rel="stylesheet" href="/assets/css/style.css?v=d08e8ef228c2be754cc594cfa958c39e9ee457ad">
     <script src="https://code.jquery.com/jquery-3.3.0.min.js" integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=" crossorigin="anonymous"></script>
     <script src="/assets/js/main.js"></script>
     <!--[if lt IE 9]>
@@ -68,13 +68,14 @@
     <p>This way I would have a template to list the challanges (challegeList.html), a template for listing the ctf’s (ctfList.html), a template for writeups (writeup.html), and the default. 
 Each template has a bit of code in it as you can see on github to iterate through lists and populate tables.  The default is a nice blank page with just the title.  This took a bit of time fucking around with the ruby based for loops.</p>
   </li>
-  <li>The way I ended up organizing this (keep in mind I am a hacker not a professional programmer) was to use the “categories” variable in the ‘front matter’ to differentiate between a ctf competition and a ctf challenge.  All CTF competition will get the “list” name and all challenges for that ctf will get the “<name of="" the="" ctf="">" as their categories name.  From there I iterate on the respective layout to populate the tables with 'posts'.  Everything is a post (meaning ctf comptitions and challenges are both posts).  I organized everything in the directory structure: <br /></name></li>
-</ol>
-
-<p><code class="highlighter-rouge">&lt;jekyll root&gt;/_posts/competitions/&lt;ctf name&gt;/&lt;post in jekyll format&gt;</code></p>
-
-<ol>
-  <li>I created a ‘post’ template for the writeups and for the competitions so I wouldn’t forget this complicated shitshow.  The end for now…</li>
+  <li>
+    <p>The way I ended up organizing this was to use liquid variables in the ‘front matter’ of <code class="highlighter-rouge">posts</code> to differentiate between a ctf competition and a ctf challenge.  All CTF competitions will get the variable <code class="highlighter-rouge">competition:</code> set to <i>“yup”</i>  and all challenges for that ctf will get the <code class="highlighter-rouge">competitionTitle</code> set as the competition name.  Everything I put up is a liquid <code class="highlighter-rouge">post</code> and I iterate through the posts checking varibles to sort the CTf menus and then just fill in a <code class="highlighter-rouge">post</code> with the challenge write up.</p>
+  </li>
+  <li>
+    <p>I found that this template had a arrow space to actually print the content after my first build. To change that I created a new <code class="highlighter-rouge">assets</code> folder in the root of the project copied the style.css from: 
+<code class="highlighter-rouge">&lt;root&gt;/_site/assets/css/</code>.  On the next buld, my style.css overwrote the default that is built by jekyll.</p>
+  </li>
+  <li>I created a ‘post’ template for the writeups and for the competitions. The end for now…</li>
 </ol>
 
 

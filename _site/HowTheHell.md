@@ -20,11 +20,13 @@ This readme is for me as much as it is you.  I spent the better part of a day tr
 5. This way I would have a template to list the challanges (challegeList.html), a template for listing the ctf's (ctfList.html), a template for writeups (writeup.html), and the default. 
 Each template has a bit of code in it as you can see on github to iterate through lists and populate tables.  The default is a nice blank page with just the title.  This took a bit of time fucking around with the ruby based for loops.  
 
-6. The way I ended up organizing this (keep in mind I am a hacker not a professional programmer) was to use the "categories" variable in the 'front matter' to differentiate between a ctf competition and a ctf challenge.  All CTF competition will get the "list" name and all challenges for that ctf will get the "<name of the ctf>" as their categories name.  From there I iterate on the respective layout to populate the tables with 'posts'.  Everything is a post (meaning ctf comptitions and challenges are both posts).  I organized everything in the directory structure: <br>
+6. The way I ended up organizing this was to use liquid variables in the 'front matter' of `posts` to differentiate between a ctf competition and a ctf challenge.  All CTF competitions will get the variable `competition:` set to <i>"yup"</i>  and all challenges for that ctf will get the `competitionTitle` set as the competition name.  Everything I put up is a liquid `post` and I iterate through the posts checking varibles to sort the CTf menus and then just fill in a `post` with the challenge write up. 
 
-`<jekyll root>/_posts/competitions/<ctf name>/<post in jekyll format>`
+7. I found that this template had a arrow space to actually print the content after my first build. To change that I created a new `assets` folder in the root of the project copied the style.css from: 
+`<root>/_site/assets/css/`.  On the next buld, my style.css overwrote the default that is built by jekyll.  
 
-7. I created a 'post' template for the writeups and for the competitions so I wouldn't forget this complicated shitshow.  The end for now...
+8. I created a 'post' template for the writeups and for the competitions. The end for now...
+
 
 
 
